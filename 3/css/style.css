@@ -1,0 +1,449 @@
+/* make scrolling smooth */
+html {
+	scroll-behavior: smooth;
+}
+/* set fonts */
+body {
+  font-family: 'New Tegomin', serif;
+  font-size:large;
+  font-weight:300;
+  margin: 0;
+}
+/* fix the navigation bar */
+nav {
+  position:fixed;
+  top:var(--header-height);
+  right:0px;
+  z-index: 1000;
+  grid-area:nav;
+}
+
+content {
+  
+  grid-area:content;
+}
+
+/* navigation through slides ? */
+
+nav {
+	position: fixed;
+	top: var(--header-height);
+	right: 0px;
+	margin-top: 5em;
+	padding-left: 1.2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+	width: 40px;
+	border-style: none;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+	font-weight: 400;
+  background-color: rgb(14, 22, 56);
+}
+
+nav a {
+	display: flex;
+	text-decoration: none;
+	color:white;
+	opacity: 1;
+	padding: 8px;
+	transition: 0.5s ease-out;
+}
+
+nav a:hover {
+	color: rgb(255, 154, 96);
+}
+
+.active::before {
+	content: " ▶ ";
+	color: rgb(255, 255, 255);
+	margin-left: -21px;
+	margin-right: 10px;
+}
+
+/* end navigation */
+
+/* Home start */
+
+.animate-it {
+	/* I hide all the animated objects 
+  before they start animating */
+	opacity: 0;
+}
+
+/* animation of the First Header */
+h1.animate-it {
+	animation-name: radiateIn;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
+}
+
+#link1 {
+  font-size: 9vw;
+  color: rgb(255, 255, 255);
+  margin-top:0;
+  padding: 150px;
+  margin-bottom: 200px;
+}
+
+@keyframes radiateIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+/* set a blue background */
+.entry-background {
+  background-color: rgb(14, 22, 56);
+}
+
+
+/* Home end  */
+
+#link1 {
+  margin-top: 0%;
+}
+
+#container1{
+  position: relative;
+}
+
+/*************** ANIMATION START ****************/
+
+/* hide item */
+.visible {
+  opacity: 1;
+}
+/* show item */
+.invisible {
+  opacity: 0;
+}
+
+/* dolly */
+#image1{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  clear: both;
+  position: sticky;
+  top: 200px;
+  z-index: 1020; 
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+@keyframes slideFadeOut{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+/* fading out duration */
+.slideFadeOut {
+  animation: slideFadeOut 2s;
+}
+/* fading in duration */
+.slideFadeIn {
+  animation: slideFadeIn 2s;
+}
+/* fading in for students and teacher*/
+.objectFadeIn {
+  animation: slideFadeIn 5s;
+}
+/*************** ANIMATION END ****************/
+
+#container2{
+  position: relative;
+}
+
+/* school picture */
+#image2 {
+  display: table;
+  width: 100%;
+  margin-top: 0%;
+}
+/* students */
+#image2right1{
+  display: table;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 30%;
+  right: 30%;
+}
+
+#image2right2{
+  display: table;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+}
+
+#image2left1{
+  display: table;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom:  32%;
+  left: 30%;
+  
+}
+
+#image2left2{
+  display: table;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 8%;
+  left: 12%;
+}
+
+/* classroom */
+#image3 {
+  display: table;
+  width: 100%;
+}
+#teacher{
+  display: table;
+  position: absolute;
+  width: 27%;
+  bottom:7%;
+  right:10%
+}
+#container3{
+  position: relative;
+}
+
+/* home */
+#girl_home{
+  display: table;
+  width: 100%;
+
+}
+/* conversation between girl and mother */
+#textbox1{ 
+  position: absolute;
+  display: table;
+  width: 20%;
+  bottom:53%;
+
+}
+#textbox2{
+  position: absolute;
+  display: table;
+  width: 20%;
+  bottom:55%;
+  left: 22%;
+}
+#textbox3{
+  position: absolute;
+  display: table;
+  width: 20%;
+  bottom:47%;
+  left: 52%;
+}
+
+/* Dinner scene */
+#container4{
+  position: relative;
+}
+/* Father's textbox */
+#textbox4{
+  position: absolute;
+  display: table;
+  width: 20%;
+  bottom:47%;
+  left: 5%;
+}
+#diner1 {
+  display: table;
+  width: 100%;
+}
+#diner2 {
+  display: table;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* Bedroom scene */
+#bed {
+  display: table;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Bottom part of bed */
+#blanket {
+  background-image: url(bedroom-bottom-half.png);
+  display: table;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container5{
+  position: relative;
+}
+/* Foods on bed */
+#pizza{
+  position: absolute;
+  display: table;
+  width: 5%;
+  right: 50%;
+  bottom: 20%;
+}
+#hamburger{
+  position: absolute;
+  display: table;
+  width: 5%;
+  left:29%;
+  bottom: 19%;
+}
+#cake{
+  position: absolute;
+  display: table;
+  width: 5%;
+  right: 30%;
+  bottom: 25%;
+}
+/* Scale scene */
+#container6{
+  position: relative;
+  background-color: #ffffffb0;
+}
+#scale {
+  display: table;
+  width: 13%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 160px;
+}
+/* weight on scale */
+#weight{
+  position: absolute;
+  left: 49%;
+  top:37%;
+}
+
+/* graph style */
+#graph-europe {
+  display: table;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+/* style of text parts */
+h1, h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+p {
+  text-align:justify;
+}
+
+content {
+  padding-left:var(--content-padding-left);
+  padding-right:var(--content-padding-right);
+}
+
+content h1 {
+  padding-top:calc(var(--header-height) + 0.5em);
+  margin-top:calc(var(--header-height) * -1);
+  background-clip:padding-box;
+  font-weight:300;
+}
+
+/* footer start */
+
+#footer{
+  background-color: rgb(14, 22, 56);
+  color:white;
+}
+
+#title-line-1 {
+  font-size: 1em;
+  margin-top: 80px;
+}
+
+#title-line-2 {
+  font-size: 1.5em;
+  margin-top: 120px;
+  padding-bottom: 100px;
+}
+
+#chapter-title {
+  font-size: 4em;
+  padding-top: 100px;
+}
+
+#chapter-title-2 {
+  font-size: 4em;
+  padding-top: 30px;
+}
+
+#chapter-line {
+  margin-top: 60px;
+}
+
+#chapter-line-2 {
+  margin-top: 70px;
+  font-size: 1.1em;
+}
+
+#chapter-line-3 {
+  margin-top: 50px;
+  font-size: 1.2em;
+}
+
+#chapter-line-4 {
+  margin-top: 50px;
+  font-size: 1.6em;
+}
+
+#stress-title {
+  margin-top: 10px;
+  font-size: 3em;
+}
+
+#chapter-title-margin-top {
+  margin-top: 250px;
+}
+
+#chapter-end-line {
+  margin-top: 50px;
+  font-size: 1.6em;
+  padding-bottom: 100px;
+}
+
+h2, h3 {
+  color: white;
+}
+
+/* footer end */
